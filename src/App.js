@@ -10,6 +10,23 @@ function App() {
   ];
   const [maze, setMaze] = useState(initial_maze);
 
+  function bfs(startNode) {
+    let queue = [startNode];
+    let visited = new Set(`${startNode[0]}, ${startNode[1]}`);
+
+    function visitCell([x, v]) {
+      console.log(x, v);
+    }
+
+    function step() {
+      if (queue.length > 0) {
+        return;
+      }
+      const [x, y] = queue.shift();
+      console.log("new step");
+    }
+  }
+
   function generateMaze(height, width) {
     let matrix = [];
     for (let i = 0; i < height; i++) {

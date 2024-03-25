@@ -1,38 +1,47 @@
-.App {
-  text-align: center;
+main {
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.cell {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #fff;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.maze-grid {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.maze {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.maze-button {
+  background-color: rgb(78, 78, 216);
+  margin: 10px;
+  border: 1px solid #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px;
+  color: #fff;
+  border-radius: 5px;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.cell.path {
+  background: #fff;
+}
+.cell.wall {
+  background: #000;
+}
+.cell.start {
+  background: green;
+}
+.cell.end {
+  background: red;
 }
